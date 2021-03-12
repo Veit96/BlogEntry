@@ -10,7 +10,6 @@ font-family: 'Roboto', sans-serif;
 */
 
 /* CUSTOM PROPERTIES */
-
 :root {
     --clr-primary-200: #846352ff;
     --clr-primary-400: #4c652bff;
@@ -22,7 +21,6 @@ font-family: 'Roboto', sans-serif;
 }
 
 /* RESET */
-
 * {
     margin: 0;
     padding: 0;
