@@ -1,0 +1,107 @@
+/* 
+font-family: 'Amatic SC', cursive;
+font-family: 'Roboto', sans-serif;
+
+--charleston-green: #272926ff;
+--dark-olive-green: #4c652bff;
+--tea-green: #d3e4adff;
+--desert-sand: #d6b7a3ff;
+--raw-umber: #846352ff;
+*/
+
+/* CUSTOM PROPERTIES */
+
+:root {
+    --clr-primary-200: #846352ff;
+    --clr-primary-400: #4c652bff;
+    --clr-neutral-100: #d3e4adff;
+    --clr-neutral-300: #d6b7a3ff;
+    --clr-neutral-900: #272926ff;
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-accent: 'Amatic SC', cursive;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* GENERIC */
+body {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+h2, h3, p {
+    margin-bottom: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-accent);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* UTILITY CLASSES */
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+.container--narrow {
+    max-width: 15rem;
+}
+.bg-light {
+    background-color: var(--clr-neutral-100);
+}
+
+.bg-dark {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+}
+
+.bg-primary {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-400);
+}
+
+.text-center {
+    text-align: center;
+}
+.text-italic {
+    font-style: italic;
+}
+.split {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+header, 
+section {
+    padding: 4rem 0;
+}
+@media only screen and (min-width: 768px) {
+    header, 
+    section {
+        padding: 8rem 0;
+    }
+}
+
+/* FOR DESKTOP */
+@media only screen and (min-width: 768px) {
+    .container--narrow {
+        max-width: 40rem;
+    }
+    .split {
+        flex-direction: row;
+    }
+    .split > * {
+        flex-basis: 100%;
+    }
+}
