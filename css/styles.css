@@ -22,6 +22,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 /* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,11 +37,6 @@ body {
     font-size: 1.3125rem;
     line-height: 1.6;
 }
-@media only screen and (max-width: 768px) {
-    html {
-        font-size: 10px;
-    }
-}
 h1, h2, h3, p {
     margin-bottom: 1em;
 }
@@ -49,11 +45,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1;
 }
-h1 {
-    font-size: 3em;
-}
-h2 {
-    font-size: 2em;
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
 }
 
 /* UTILITY CLASSES */
@@ -64,20 +62,21 @@ h2 {
 .container--narrow {
     max-width: 15rem;
 }
+.bg-white {
+    color: var(--clr-primary-400);
+}
 .bg-light {
+    color: var(--clr-neutral-900);
     background-color: var(--clr-neutral-100);
 }
-
 .bg-dark {
     color: var(--clr-neutral-100);
     background-color: var(--clr-neutral-900);
 }
-
 .bg-primary {
     color: var(--clr-neutral-100);
     background-color: var(--clr-primary-400);
 }
-
 .text-center {
     text-align: center;
 }
@@ -93,13 +92,11 @@ img {
     display: block;
     max-width: 100%;
 }
-header, 
-section {
+header, section {
     padding: 4rem 0;
 }
 @media only screen and (min-width: 768px) {
-    header, 
-    section {
+    header, section {
         padding: 8rem 0;
     }
 }
@@ -113,7 +110,15 @@ section {
         flex-direction: row;
         gap: 2em;
     }
-    .split > * {
+    .split>* {
         flex-basis: 100%;
     }
+}
+
+/* HEADER */
+.date {
+    padding-top: 2em;
+    font-size: 1rem;
+    font-weight: 300;
+    border-top: 0.1em solid var(--clr-neutral-900);
 }
